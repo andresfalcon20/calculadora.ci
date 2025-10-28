@@ -24,6 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Ejecutar pruebas
+    - name: 🔧 Agregar src al PYTHONPATH
       run: |
-        pytest test/
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+
+    - name: 🧪 Ejecutar pruebas
+      run: |
+        pytest --disable-warnings --maxfail=1

@@ -1,4 +1,4 @@
-from src.calculadora import sumar
+from src.calculadora import suma
 
-def test_sumar():
-    assert sumar(2, 3) == 5
+def test_suma():
+    assert suma(2, 3) == 5
